@@ -31,6 +31,7 @@ library(ggrepel)
 library(gganimate)
 library(ggpubr)
 library(reshape2)
+library(tidyverse)
 
 # ==== travail sur la table uniquement ====
 setwd("G:/00_data_ref/data_gouv_fr/dotation")
@@ -68,7 +69,7 @@ summary(df0$dotation_forfaitaire)
 df0$Class=cut(df0$dotation_forfaitaire,c(0,25000,50000,100000,Inf),labels=c('0-25000','25000-50000','50000-100000','>100000'))
 library(dplyr)
 
-library(tidyverse)
+
 # df0 <- subset(df0, dep != "2A" & dep != "2B")
 length(unique(df0$depcom))
 
